@@ -10,7 +10,13 @@ const App = () => {
   };
 
   const itemClick = () => {
-    if (listitem == "") {
+    for (let i of list) {
+      if (listitem === i) {
+        alert("This item is already present in Your ToDoList");
+        return;
+      }
+    }
+    if (listitem === "") {
       alert("First Write something");
       return;
     }
